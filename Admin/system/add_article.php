@@ -55,7 +55,7 @@ require 'include/globle.inc.php';
         <td width="10%" >关键词</td>
         <td width="90%"><input type="text" class="input-text" name="keywords"  id="keywords"  size="55" /></td>
       </tr>
-      <tr>
+     <tr>
         <td width="10%" >SEO简介</td>
         <td width="90%"><textarea  name="description"  style="width: 446px;height: 120px;resize: none;" id="description"   /></textarea></td>
       </tr>
@@ -102,7 +102,6 @@ laydate({
 </script>
 <?php
 
-
 if($_GET["act"]==ok){
 	$siteinfo = array(
 	  'catid'=>$_POST['catid'],
@@ -122,10 +121,10 @@ if($_GET["act"]==ok){
 	@$content = $_POST['content'];
 	$db->insert("xy_article", $siteinfo);
 	$sqlId = "select id from xy_article where c_date='$c_date'";
-	$result=$db->query($xy_sql); 
-	while ($row = mysqli_fetch_array($result))
-	$Id = $row['id'];
-
+	$result=$db->query($sqlId);
+	while ($row = mysql_fetch_array($result)){
+		$Id = $row[id];
+	}
 	//生成静态页面
 	$Title = $title;
 	$C_date = date(("Y-m-d"), $c_date);
@@ -135,16 +134,17 @@ if($_GET["act"]==ok){
 	//定义变量
 	$temp_file = "../../html/news/news.html";
 	//临时文件，也可以是模板文件
-	$dest_file = "../../html/news/".$C_date.".html";
+	$dest_file = "../../html/news/".$c_date.".html";
 	//生成的目标页面
 	$fp = fopen($temp_file, "r");
 	//只读打开模板
 	$str = fread($fp, filesize($temp_file));
 	//读取模板中内容
+	$str = str_replace("{index}", $id, $str);
 	$str = str_replace("{title}", $Title, $str);
 	$str = str_replace("{infos}", $C_date, $str);
 	$str = str_replace("{MainContent}", $Content, $str);
-	$str = str_replace("{id}", $id, $str);
+	
 	//替换内容
 	fclose($fp);
 	$handle = fopen($dest_file, "w");

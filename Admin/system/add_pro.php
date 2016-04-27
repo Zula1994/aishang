@@ -79,7 +79,7 @@ if(targetObj.style.display!="none"){
 	});
 	</script>
   <div id="msg"></div>
-  <form name="addform" id="addform" action="?act=ok" method="post">
+  <form name="addform" id="addform" action="add_pro.php?act=ok" method="post">
     <table cellpadding=0 cellspacing=0 class="table_form" width="100%">
       <tr>
         <td width="10%" ><font color="red">*</font>标题</td>
@@ -108,16 +108,7 @@ if(targetObj.style.display!="none"){
         <td width="10%" >图片</td>
         <td width="90%" id="box_pics"><input type="text" name="link_img" id="link_img" class="input-text" size="50"/>
         <input type="buttons" id="s_img" class="xy_smt" value="选择图片" /></td>
-				<input type="file" id="file" style="display: none;" />
-        <script>
-        		$("#file").change(function() {
-							$('#link_img').val($("#file").val())
-						}) 
-						$("#s_img").click(function() {
-							$("#file").click();
-						});
-        </script>
-      </tr>
+       </tr>
       <tr>
         <td width="10%" >内容</td>
         <td width="90%" id="box_content"><textarea name="content" style="width:446px;height:200px; resize: none;"></textarea></td>
@@ -141,7 +132,6 @@ if(targetObj.style.display!="none"){
             <option value="1">是</option>
           </select></td>
       </tr>
-      
     </table>
     <div id="bootline"></div>
     <div id="btnbox" class="btn">
@@ -149,6 +139,20 @@ if(targetObj.style.display!="none"){
       <input TYPE="reset"  value="取消" class="button">
     </div>
   </form>
+	<form id="frm1" target="ifr" action="add_pro.php?act=koo" method="post"
+		enctype="multipart/form-data" style="display: none;">
+		<input type="file" name="file" id="file" /> 
+	</form>
+	<iframe id="ifr" name="ifr" style="display: none;"></iframe>
+	<script>
+			$("#file").change(function() {
+				$("#frm1").submit();
+				$('#link_img').val($("#file").val())
+			}) 
+			$("#s_img").click(function() {
+				$("#file").click();
+			});
+	</script>
 </div>
 </body>
 </html>
@@ -161,9 +165,34 @@ laydate({
 </script>
 <?php 
 
+if($_GET["act"]=koo){
+	 if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br />";
+    }
+  else
+    {
+    echo "Upload: " . $_FILES["file"]["name"] . "<br />";
+    echo "Type: " . $_FILES["file"]["type"] . "<br />";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
 
+    if (file_exists("upload/" . $_FILES["file"]["name"]))
+      {
+      echo $_FILES["file"]["name"] . " already exists. ";
+      }
+    else
+      {
+      move_uploaded_file($_FILES["file"]["tmp_name"],
+      "upload/" . $_FILES["file"]["name"]);
+      echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      }
+    }
+		}
 if($_GET["act"]==ok){
-
+		
+	
+	
 	$siteinfo = array(
 		'title' => $_POST['title'],
 		'xy_price' => $_POST['a_xy_price'],
@@ -180,10 +209,10 @@ if($_GET["act"]==ok){
 		);
 		$db->insert("xy_pro", $siteinfo);
 		
-  @$c_date = strtotime($_POST['c_date']);
+	@$c_date = strtotime($_POST['c_date']);
 	@$title = $_POST['title'];
 	@$content = $_POST['content'];
-	@$thumb=$_POST['$thumb'];
+	@$thumb=$_POST['link_img'];
 	$xy_model=$_POST['$xy_model'];
 	$xy_spec=$_POST['xy_spec'];
 	$sqlId = "select id from xy_pro where c_date='$c_date'";
@@ -195,14 +224,14 @@ if($_GET["act"]==ok){
 	$Title = $title;
 	$C_date = date(("Y-m-d"), $c_date);
 	$Content = $content;
-	$Thumb=$thumb;
+	$Thumb="../../Admin/system/upload/".$thumb;
 	$Xy_model=$xy_model;
 	$Xy_spec=$xy_spec;
 	$id= $Id;
 	//定义变量
 	$temp_file = "../../html/product/1.html";
 	//临时文件，也可以是模板文件
-	$dest_file = "../../html/product/".$C_date.".html";
+	$dest_file = "../../html/product/".$c_date.".html";
 	//生成的目标页面
 	$fp = fopen($temp_file, "r");
 	//只读打开模板
@@ -214,7 +243,7 @@ if($_GET["act"]==ok){
 	$str = str_replace("{id}", $id, $str);
 	$str = str_replace("{xy_model}", $Xy_model, $str);
 	$str = str_replace("{xy_spec}", $Xy_spec, $str);
-	$str = str_replace("{thumb}", $Thumb, $str);
+	$str = str_replace("{img_link}", $Thumb, $str);
 	//替换内容
 	fclose($fp);
 	$handle = fopen($dest_file, "w");

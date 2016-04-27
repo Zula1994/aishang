@@ -140,6 +140,19 @@ if($_GET['del']=='checkbox'){
 		echo "<script>alert('恭喜你，操作成功！');window.location.href='manage_gbook.php';</script>";  
 	}
 }
+require 'include/encode.php';
+//生成JSON文件
+$sqlSel = "SELECT * FROM `xy_book`  ";
+$result =$db->query($sqlSel);
+$list=array();
+$i=0;
+while($row=mysql_fetch_array($result)){
+	$list[$i]=$row;
+	$i++;
+} 
+$json=JSON(array("list"=>$list));
+file_put_contents("../json/gbook.txt", $json);
+
 
 
 $db->close();

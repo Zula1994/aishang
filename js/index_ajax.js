@@ -7,7 +7,7 @@ $(function() {
 		var json = eval("(" + str + ")").list;
 		console.log(json);
 		var d = new Date();
-		for (var i = json.length-1; i > json.length-6; i--) {
+		for (var i = json.length-6; i <json.length-1; i++) {
 			d.setTime(json[i].c_date);
 			$("<tr>").prependTo('.MBlockTable');
 			$("<td>",{

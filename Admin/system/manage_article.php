@@ -140,15 +140,16 @@ if($_GET['del']=='checkbox'){
 }
 //生成JSON文件
 $sqlSel = "SELECT * FROM `xy_article`  ";
-$result =$db->query($sqlSel);
+$Result =$db->query($sqlSel);
 $list=array();
 $i=0;
-while($row=mysql_fetch_array($result)){
+while($row=mysql_fetch_array($Result)){
 	$list[$i]=$row;
 	$i++;
 } 
 $json=JSON(array("list"=>$list));
 file_put_contents("../json/news.txt", $json);
+
 
 
 $db->close();
