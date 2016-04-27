@@ -1,0 +1,290 @@
+	#container .inner {
+		background: #fff;
+	}
+	/*left*/
+	
+	#container .inner .left {
+		float: left;
+		widows: 200px;
+		background: #fff;
+		padding: 0 10px;
+	}
+	
+	#container .inner .left .Sbox {
+		font-size: 12px;
+		padding: 10px 0 20px;
+		width: 218px;
+	}
+	
+	#container .inner .left .Sbox .topic {
+		background: url(../images/nav_bg2.png) repeat-x;
+		border-bottom: 2px #DDDDDD solid;
+		color: #FFFFFF;
+		font-family: "微软雅黑";
+		font-size: 12px;
+		font-weight: bold;
+		line-height: 30px;
+		margin: 0 0 10px;
+		padding-left: 10px;
+	}
+	
+	#container .inner .left .Sbox .blank ul {
+		padding: 0;
+	}
+	
+	#container .inner .left .Sbox .blank ul li a {
+		background: url(../images/box_icon1.png) no-repeat 12px 12px;
+		border-bottom: 1px dotted #DDDDDD;
+		display: block;
+		height: 35px;
+		line-height: 35px;
+		padding-left: 30px;
+	}
+	
+	#container .inner .left .Sbox .ContactInfo {
+		padding: 0 10px;
+	}
+	
+	#container .inner .left .Sbox .list dl {
+		padding: 0 20px;
+	}
+	
+	#container .inner .left .Sbox .list dl dt {
+		color: #666666;
+		font-family: arial;
+		font-size: 10px;
+		line-height: 20px;
+	}
+	
+	#container .inner .left .Sbox .list dl dd {
+		border-bottom: 1px dashed #DDDDDD;
+		line-height: 25px;
+	}
+	/*right*/
+	
+	#container .inner .right {
+		border-left: 1px solid #DDDDDD;
+		float: right;
+		padding-bottom: 50px;
+		margin-top: 10px;
+		width: 744px;
+		background: #fff;
+		padding-right: 10px;
+	}
+	
+	#container .inner .right .Position {
+		background: url(../images/box_bg5.jpg) repeat left top;
+		font-size: 12px;
+		line-height: 33px;
+		margin-bottom: 15px;
+	}
+	
+	#container .inner .right .Position span {
+		padding-left: 10px;
+	}
+	
+	#container .inner .right .Position span a {
+		color: #666;
+	}
+	/*main*/
+	
+	#container .inner .right .main {
+		font-size: 12px;
+		padding: 10px 20px;
+	}
+	
+	#container .inner .right .main .content .maincontent p {
+		line-height: 200%;
+		padding: 5px 0;
+	}
+	
+	#container .inner .right .main .content .title h3{
+		font-size: 18px;
+		text-align: center;
+	}
+	
+	#container .inner .right .main .content .infos{
+		color: #666666;
+		line-height: 40px;
+		text-align: center;
+	}
+	#container .inner .right .main .content .prenext{
+		margin-top: 10px;
+		padding: 10px 0;
+	}
+	#container .inner .right .main .content .prenext ul li{
+	line-height:30px;
+	padding-left:15px;}		
+	/*ArticleList*/
+	
+	#container .inner .right .main .ArticleList {}
+	
+	#container .inner .right .main .ArticleList ul li {
+		border-bottom: 1px #DDDDDD solid;
+		padding: 10px 0;
+	}
+	
+	#container .inner .right .main .ArticleList ul li span {
+		color: #116EC3;
+		font-weight: bold;
+		padding-right: 20px;
+	}
+	
+	#container .inner .right .main .ArticleList ul li p {
+		color: #999999;
+		line-height: 200%;
+		padding: 5px 0;
+	}
+	/*MorePro*/
+	
+	#container .inner .right .main .MorePro .albumblock .inner {
+		width: 206px;
+		height: 238px;
+		margin: 0;
+		background: url("../images/album_bg.png") no-repeat center bottom;
+		border: none;
+		padding: 2px;
+	}
+	
+	#container .inner .right .main .MorePro .albumblock .inner img {
+		width: 200px;
+		height: 200px;
+		border: none;
+		padding: 2px;
+	}
+	
+	#container .inner .right .main .MorePro .albumblock .inner .albumtitle {
+		width: 206px;
+		background: none;
+		color: #116ec3;
+	}
+	
+	#container .inner .right .main .content p {
+		line-height: 200%;
+		padding: 5px 0;
+	}
+	
+	#container .inner .right .main .content .ProInfo .image a{
+	display:block;
+	width:270px;
+	height:270px;
+	border:2px solid #F5F5F5;
+	padding:2px;	
+	float: left;
+	}
+	#container .inner .right .main .content .ProInfo .column ul li{
+		height: 40px;
+		line-height: 40px;
+	}
+	#container .inner .right .main .content .ProInfo .image img{
+		height: 270px;
+		width: 270px;
+	}
+	#container .inner .right .main .content .ProInfo .ImageList{
+	float:left;
+	width:120px;
+	padding-left:10px;
+	height:270px;
+	overflow:auto;
+	SCROLLBAR-FACE-COLOR: #f5f5f5; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-SHADOW-COLOR: #f5f5f5 ; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+	SCROLLBAR-ARROW-COLOR:#116ec3; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;}
+	/*FeedBack*/
+	
+	.FeedBack .Fleft {
+		float: left;
+		width: 90px;
+	}
+	
+	.FeedBack .Fleft .Ficon {
+		padding: 0 12px;
+	}
+	
+	.FeedBack .Fleft .Fname {
+		color: #116EC3;
+		font-family: arial;
+		font-size: 12px;
+		font-weight: bold;
+		padding-top: 5px;
+		text-align: center;
+	}
+	
+	.FeedBack .Fright {
+		float: left;
+		width: 600px;
+		padding-bottom: 10px;
+	}
+	
+	.FeedBack .Fright .Fcontent .Ftime {
+		text-align: right;
+		font-family: Arial;
+		color: #116ec3;
+		padding: 0px 20px 5px 20px;
+	}
+	
+	.FeedBack .Fright .Fcontent {
+		width: 600px;
+		background: url("../images/PostBG.jpg") no-repeat left top;
+		padding: 10px 0px;
+	}
+	
+	#container .inner .right .main .FeedBack .Fright .Fcontent p {
+		padding: 0px 20px 5px 50px;
+	}
+	
+	.FeedBack .Fright .Fcontent .Freply .FRtitle {
+		margin-left: 20px;
+		line-height: 20px;
+		color: #FFFFFF;
+		height: 25px;
+		background: url("../images/picon.gif") no-repeat 2px 0px;
+		padding-left: 20px;
+		font-weight: bold;
+	}
+	
+	.FeedBack .Fright .Fcontent .Freply p {
+		color: #989E4D
+	}
+	
+	.FeedBack .Fright .Fline {
+		float: right;
+		width: 572px;
+		border-top: 1px solid #EDEDEF;
+		/*filter:progid:DXImageTransform.Microsoft.Shadow(Color=#999999, Strength=1, Direction=180);}*/
+	}
+	
+	.FeedBack .commentbox {
+		padding-top: 5px;
+	}
+	
+	.FeedBack .commentbox #commentform td {
+		height: 40px;
+	}
+	
+	.FeedBack .commentbox #commentform input {
+		height: 25px;
+		line-height: 25px;
+	}
+	
+	.FeedBack .commentbox #commentform .Cbutton {
+		background: #116EC3;
+		border: 0;
+		color: #FFFFFF;
+		cursor: pointer;
+		font-size: 14px;
+		line-height: 25px;
+	}
+	
+	#container .inner .right .main .IntroTitle {
+		font-size: 14px;
+		line-height: 35px;
+		border-left: 3px solid #116ec3;
+		margin: 10px 0px;
+		padding-left: 10px;
+		color: #116ec3;
+		background-color: #f5f5f5;
+		font-weight: bold;
+	}

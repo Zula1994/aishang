@@ -1,0 +1,313 @@
+
+@charset "utf-8";
+
+/* CSS Document */
+
+
+
+
+#container {
+	width: 100%;
+	background: #F5F5F5;
+}
+
+#container .CommonBlock {
+	width: 980px;
+	background: #fff;
+	padding: 10px 10px;
+	border: 1px #DDDDDD solid;
+	border-width: 0 1px;
+}
+
+
+/*CommonLeft*/
+
+#container .CommonLeft {
+	width: 220px;
+	float: left;
+	border: 1px #dedede solid;
+	border-top: 0;
+}
+
+#container .topic {
+	height: 28px;
+	border-top: 1px solid #ddd;
+	line-height: 28px;
+	background: url(../images/box_titlebg.png) no-repeat scroll left top;
+	color: #0099cc;
+}
+
+#container .topic a {
+	color: #fff;
+}
+
+#container .topic .TopicTitle {
+	float: left;
+	padding-left: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+
+#container .topic .TopicMore {
+	float: right;
+	font-size: 12px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+
+/*CommonCenter*/
+
+#container .CommonBlock .CommonCenter {
+	float: left;
+	width: 455px;
+	border: 1px #dedede solid;
+	border-top: 0;
+	margin: 0 10px;
+}
+
+#container .tab-hd {
+	border-top: 1px #ddd solid;
+	background: url(../images/box_titlebg.png) no-repeat -100px top;
+}
+
+#container .tab-hd li:hover {
+	background: url(../images/box_titlebg.png) no-repeat left top;
+	font-weight: bold;
+}
+
+#container .tab-hd li:hover a {
+	color: #FFFFFF;
+}
+
+#container .tab-hd li {
+	float: left;
+	width: 100px;
+	height: 28px;
+	border-right: 1px #ddd solid;
+	text-align: center;
+	line-height: 28px;
+	color: #fff;
+}
+
+#container .tab-hd li a {
+	color: #333333;
+	text-decoration: none;
+}
+
+#container .tab-bd li {
+	display: none;
+	padding: 10px;
+}
+
+#container .MBlockTable td {
+	font-size: 12px;
+	line-height: 29px;
+}
+
+#container .MBlockTable span {
+	color: #116EC3;
+	font-size: 11px;
+	padding-left: 10px;
+}
+
+#container .CommonBlock .LeftImg {
+	float: left;
+	font-size: 12px;
+	padding: 20px 10px;
+	text-align: center;
+	width: 204px;
+}
+
+#container .CommonBlock .LeftImg p {
+	background: #116ec3;
+	height: 20px;
+	line-height: 20px;
+}
+
+#container .CommonBlock .LeftImg p a {
+	color: #fff;
+	font-weight: bold;
+}
+
+#container .CommonBlock .RightTxt {
+	float: left;
+	font-size: 12px;
+	line-height: 28px;
+	padding: 10px 10px 10px 0;
+	width: 206px;
+}
+
+
+/*CommonRight*/
+
+#container .CommonBlock .CommonRight {
+	width: 276px;
+	float: right;
+	border: 1px #DEDEDE solid;
+	border-top: 0;
+}
+
+#container .img {
+	float: left;
+	padding: 14px;
+	width: 260px;
+}
+
+#container .CommonBlock .BlockBox .ContentTxt {
+	font-size: 12px;
+	line-height: 26px;
+	padding: 10px;
+	;
+}
+
+#container .CommonBlock .DivList {
+	font-size: 12px;
+}
+
+#container .CommonBlock .DivList .DivLi a {
+	height: 28px;
+	line-height: 28px;
+	overflow: hidden;
+}
+
+
+/*ProductBG*/
+
+#container .ProductBG {
+	height: auto;
+	width: 980px;
+	padding: 0 10px;
+	border: 1px #DDDDDD solid;
+	border-top: 0;
+	background: #fff;
+}
+
+#container .ProductBG .MainBlock {}
+
+#container .ProductShow {
+	width: 980px;
+	font-size: 12px;
+	padding: 10px 0;
+	border: 1px #DDDDDD solid;
+	border-top: 0;
+}
+
+#container .ProductShow .blk_29 {
+	PADDING: 0px 0px;
+	OVERFLOW: hidden;
+	ZOOM: 1;
+	POSITION: relative;
+}
+
+#container .ProductShow .blk_29 .LeftBotton {
+	LEFT: 10px;
+	FLOAT: left;
+	WIDTH: 35px;
+	CURSOR: pointer;
+	POSITION: absolute;
+	TOP: 80px;
+	HEIGHT: 114px
+}
+
+#container .ProductShow .blk_29 .RightBotton {
+	RIGHT: 5px;
+	FLOAT: right;
+	right: 7px;
+	WIDTH: 35px;
+	CURSOR: pointer;
+	POSITION: absolute;
+	TOP: 80px;
+	HEIGHT: 114px
+}
+
+#container .ProductShow .blk_29 .Cont {
+	MARGIN: 0px auto;
+	OVERFLOW: hidden;
+	PADDING: 5px 0 0 0px;
+	float: left;
+	height: 130px;
+	width: 978px;
+	POSITION: relative;
+	left: 8px;
+}
+
+#container .ProductShow .blk_29 .box {
+	FLOAT: left;
+	WIDTH: 326px;
+}
+
+#container .ProductShow .blk_29 .box IMG {
+	BORDER: #CCC 1px solid;
+	PADDING: 1px;
+	DISPLAY: block;
+	BACKGROUND: #fff;
+	PADDING-BOTTOM: 3px;
+	MARGIN: 0px auto;
+	width: 120px;
+	height: 120px;
+}
+
+#container .ProductShow .blk_29 .box A:hover IMG {
+	BORDER: #333 1px solid;
+	text-decoration: none;
+}
+
+#container .ProductShow .blk_29 .box .BoxLeft {
+	width: 135px;
+	float: left;
+}
+
+#container .ProductShow .blk_29 .box .BoxRight {
+	width: 175px;
+	float: left;
+}
+
+#container .ProductShow .blk_29 .box .BoxRight .ProTitle {
+	line-height: 30px;
+	font-size: 14px;
+}
+
+#container .ProductShow .blk_29 .box .BoxRight .ProTxt {
+	color: #666
+}
+
+#container .ProductShow .blk_29 .box .BoxRight .ProMore a {
+	color: #F30;
+	font-weight: bold;
+}
+
+#container .ProductShow .blk_29 .box .BoxRight {
+	padding-left: 5px;
+	float: left;
+	width: 175px;
+}
+
+#container .ProductShow .blk_29 .box .BoxRight .ProTitle {
+	font-size: 14px;
+	line-height: 30px;
+}
+
+#container .ProductShow .blk_29 .box .BoxRight .ProTxt {
+	color: #666;
+}
+
+#container .ProductShow .blk_29 .box .BoxRight .ProMore a {
+	color: #f30;
+	font-weight: bold;
+}
+
+#Links {
+	font-size: 12px;
+	line-height: 25px;
+	padding: 10px 0;
+}
+
+#Links span {
+	font-weight: bold;
+}
+
+#Links a {
+	padding: 0 7px;
+}

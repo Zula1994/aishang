@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="ajax.js"></script>
+		<script src="../Admin/js/jquery.min.js"></script>
+		<script src="date.js"></script>
+		<script>
+			$(function() {
+				ajax("../Admin/news.txt", function(str) {
+					showList(str);
+				})
+
+				function showList(str) {
+					var json = eval("(" + str + ")").list;
+					var d = new Date();
+					for (var i = 0; i < json.length; i++) {
+						d.setTime(json[i].c_date);
+						console.log(FormatDate(d));
+						$("<li>", {
+							"class": "ColorLink",
+						}).appendTo($('#list')[0]);
+						$("<span>", {
+							text: FormatDate(d),
+						}).appendTo($("li")[i+1]);
+						$("<a>", {
+							"href": "../html/1.html",
+							"target":"_blank",
+							text:json[i].title,
+						}).appendTo($("li")[i+1]);
+						$("<p>", {
+							text:json[i].description,
+						}).appendTo($("li")[i+1]);
+					}
+				}
+			})
+		</script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li class='ColorLink'><span>2013-6-2</span><a href='../html/1.html' target='_blank'>最大的赢家莫过于芯片厂商和电信运营商</a>
+				<p>
+					对运营商们来说，目前的机会在于，传统概念中被认为“低端”的千元智能机市场可能由于新的合作伙伴不断加入而发生变化。此前，千元智能机市场被华为、中兴、酷派、联想等国内厂商牢牢占据，随后三星、HT ...</p>
+			</li>
+		</ul>
+	</body>
+
+</html>

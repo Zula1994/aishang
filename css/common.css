@@ -1,0 +1,387 @@
+/* top start*/
+
+body,
+td,
+th {
+	font-size: 14px;
+}
+
+body,
+div,
+p,
+img,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+blockquote {
+	padding: 0px;
+	margin: 0px;
+}
+
+.FontRed {
+	color: #FF0000;
+}
+
+h3 {
+	font-size: 14px;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	border: 0;
+	display: block;
+}
+
+.gray {
+	color: #666666;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #116ec3;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+p {
+	line-height: 180%;
+}
+
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.layout {
+	width: 1002px;
+	clear: both;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.ColorLink a {
+	color: #116ec3;
+}
+
+
+/*header*/
+
+#head .top {
+	width: 100%;
+	height: 105px;
+	border-top: 2px solid #116ec3;
+	background: #F5F5F5;
+}
+
+#head .top .TopInfo {
+	text-align: right;
+	line-height: 23px;
+	width: 960px;
+	padding-right: 42px;
+	float: right;
+	color: #999;
+}
+
+#head .top .TopInfo a {
+	padding: 0 5px;
+	color: #116ec3;
+}
+
+#head .top .TopLogo {
+	width: 100%;
+}
+
+#head .top .TopLogo .logo {
+	float: left;
+	width: 335px;
+	height: 75px;
+}
+
+#head .top .TopLogo .tel {
+	float: right;
+	width: 250px;
+	margin-top: 10px;
+}
+
+#head .top .TopLogo .tel .telW {
+	padding-left: 30px;
+	padding-top: 8px;
+	color: #666;
+	font-size: 12px;
+}
+
+#head .top .TopLogo .tel .telN {
+	padding-left: 30px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 22px;
+	color: #F90;
+	line-height: 100%;
+}
+
+#head #NavLink {
+	width: 100%;
+	height: 45px;
+	background: url(../images/nav_bg1.png) repeat-x;
+}
+
+#NavLink #sddm {}
+
+#NavLink #sddm li {
+	float: left;
+	width: 108px;
+	height: 45px;
+	font-weight: bold;
+}
+
+#NavLink #sddm li a {
+	display: block;
+	width: 98px;
+	color: #FFF;
+	text-align: center;
+	padding: 0 5px;
+	line-height: 45px;
+	font-size: 14px;
+}
+
+#NavLink #sddm .CurrentLi a {
+	background: none;
+}
+
+#NavLink #sddm li a:hover {
+	text-decoration: none;
+	background: url(../images/nav_bg2.png) repeat-x center top;
+	color: #FFFFFF;
+}
+#NavLink #sddm div{
+	position: absolute;
+	z-index: 600;
+	display: none;
+}
+ #NavLink #sddm div a
+	{	position: relative;
+		padding: 0px 5px;
+		text-align: center;
+		color: #FFF;
+		width:150px;
+		font-size:12px;
+		font-weight:normal;
+		text-decoration:none;
+		line-height:30px;
+		border-top:1px solid #0f5ea6;
+		background-color:#116ec3;}
+
+#NavLink #sddm div a:hover{
+	background:url("../images/nav_bg2.png") repeat-x center top;
+	color:#FFFFFF;
+	font-weight:bold;}
+
+/*container*/
+
+#container {
+	width: 100%;
+	background: #F5F5F5;
+}
+
+#container .t_page {
+	font-size: 12px;
+	line-height: 25px;
+	padding: 10px;
+	text-align: center;
+}
+
+#container .t_page a {
+	border: 1px solid #DEDEDE;
+	margin: 0 3px;
+	padding: 2px 5px;
+}
+
+
+/*product*/
+
+.RightNav {
+	padding-top: 7px;
+}
+
+.ClassNav {
+	padding: 0;
+	font-size: 12px;
+}
+
+.ClassNav .NavTree ul {}
+
+.ClassNav .NavTree ul li {
+	position: relative;
+	width: 210px;
+	height: 35px;
+	padding-left: 10px;
+	border-bottom: 1px #DDDDDD dashed;
+	z-index: 10;
+}
+
+.ClassNav .NavTree ul li a {
+	display: block;
+	width: 210px;
+	height: 34px;
+	line-height: 34px;
+}
+
+.ClassNav .NavTree ul li a:hover {
+	text-decoration: none;
+}
+
+.ClassNav .NavTree ul li ul {
+	left: 220px; 
+position: absolute;
+width: 160px; /*sub menu width*/
+top: 0;
+display: none;
+border:1px solid #116ec3;
+border-top:2px solid #116ec3;
+background:#FFFFFF;
+}
+
+
+/*albumblock*/
+
+.albumblock {
+	float: left;
+	padding: 10px 10px 30px 12px;
+}
+
+.albumblock .inner {
+	width: 170px;
+	height: 170px;
+	position: relative;
+	border: 1px solid #dededc;
+	overflow: hidden;
+	margin: 0
+}
+
+.albumblock .inner img {
+	border: 2px solid #fff;
+	width: 166px;
+	height: 166px;
+}
+
+.albumblock .inner .albumtitle {
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	width: 170px;
+	background: #116ec3;
+	position: relative;
+	bottom: 0px;
+	left: 0;
+	color: #FFFFFF;
+	font-weight: ;
+	text-align: center;
+	cursor: pointer;
+	margin: auto;
+}
+
+.albumblock .inner .albumtitle span {
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.albumblock .inner a:hover {
+	text-decoration: none;
+}
+
+.albumblock .inner a:visited {
+	text-decoration: none;
+}
+
+
+/*footer*/
+
+#footer {
+	border-top: 2px solid #116ec3;
+	width: 100%;
+	height: 80px;
+	margin: auto;
+	padding-bottom: 30px;
+	font-size: 11px;
+	color: #666;
+	background: #FFFFFF url(../images/top_bg1.jpg) repeat-x left top;
+}
+
+#footer a {
+	color: #666;
+}
+
+#footer .inner {
+	margin: auto;
+	width: 980px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#footer .inner p {
+	line-height: 25px;
+}
+
+
+/*SearchBar*/
+
+.SearchBar {
+	width: 174px;
+	height: 25px;
+	background: url("../images/search_bg.gif") no-repeat left top;
+}
+
+.Sbox .SearchBar {
+	margin: 10px 0px 0px 10px;
+}
+
+.SearchBar #search-text {
+	width: 130px;
+	padding: 0px 5px;
+	margin: 0px;
+	color: #999999;
+	height: 23px;
+	line-height: 23px;
+	font-size: 12px;
+	background: none;
+	border: none;
+}
+
+.SearchBar #search-submit {
+	border: none;
+	background: none;
+	font-size: 12px;
+	color: #FFFFFF;
+	height: 25px;
+	margin: 0px;
+	cursor: pointer;
+	padding: 0px;
+	line-height: 25px;
+	width: 34px;
+}
